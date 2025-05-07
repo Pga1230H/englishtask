@@ -1,0 +1,168 @@
+.image_wrapper {
+  position: relative;
+  height: 700px;
+  width: 600px;
+  overflow: hidden;
+}
+
+
+.fill-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body {
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  height: 60vh;
+  width: 60vh;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+      10px 10px 10px rgba(255, 255, 255, 0.2),
+      10px 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+}
+nav {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.5s ease; 
+}
+
+nav h1 {
+  transition: color 0.5s ease; 
+}
+
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  }
+
+nav .logo img {
+  height: 40px;
+  width: auto;
+  }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  }
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  }
+
+nav ul li a:hover {
+  color: #ffd700;
+  }
+
+.poster_wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.fill-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.flower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease; /* Smooth fade */
+  opacity: 0;
+}
+
+.flower.active {
+  opacity: 1;
+}
+
+
+.blue-button {
+  background-color: #840013 ;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;  
+  z-index: 10;
+}
+
+.blue-button:hover {
+  background-color: #55020f ;
+}
+
+.hidden-text {
+  color: white;
+  margin-top: 20px;
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.hidden-text.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blue-button.moved {
+  transform: translateY(20px);
+  transition: transform 0.5s ease;
+}
+
+
+.background-image {
+  background: url('background.png') no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  width: 500px;
+
+
+ 
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+
+.background-image.show {
+  transform: translateX(0);
+  opacity: 1;
+}
